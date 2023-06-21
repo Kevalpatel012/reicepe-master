@@ -1,52 +1,53 @@
-@import "../../App.scss";
+@import "../../App.scss";  // Importing the App.scss file
 
-.sidebar{
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $clr-white;
-    z-index: 1000;
-    padding: 24px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transform: translateX(100%);
-    transition: $transition;
+.sidebar {
+    position: fixed;  // Positioning the sidebar as fixed
+    right: 0;  // Aligning the sidebar to the right side
+    top: 0;  // Aligning the sidebar to the top
+    width: 100%;  // Setting the width of the sidebar to 100% of the container
+    height: 100%;  // Setting the height of the sidebar to 100% of the container
+    background-color: $clr-white;  // Setting the background color of the sidebar to a variable named $clr-white
+    z-index: 1000;  // Setting the z-index of the sidebar to 1000
+    padding: 24px;  // Setting padding of 24px for the sidebar
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  // Applying a box shadow to the sidebar
+    transform: translateX(100%);  // Translating the sidebar horizontally by 100%
+    transition: $transition;  // Applying a transition effect using a variable named $transition
 
-    &-visible{
-        transform: translateX(0);
+    &-visible {
+        transform: translateX(0);  // Translating the sidebar back to its original position
     }
 
-    .navbar-hide-btn{
-        position: absolute;
-        right: 14px;
-        color: $clr-orange;
-        transition: $transition;
+    .navbar-hide-btn {
+        position: absolute;  // Positioning the hide button as absolute
+        right: 14px;  // Aligning the hide button to the right
+        color: $clr-orange;  // Setting the color of the hide button to a variable named $clr-orange
+        transition: $transition;  // Applying a transition effect using a variable named $transition
 
-        &:hover{
-            color: $clr-dark;
+        &:hover {
+            color: $clr-dark;  // Changing the color of the hide button on hover to a variable named $clr-dark
         }
     }
 
-    .side-content{
-        .side-nav{
-            margin-top: 4rem;
-            .side-item{
-                padding: 6px 0;
-                border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+    .side-content {
+        .side-nav {
+            margin-top: 4rem;  // Setting top margin for the side navigation
+            .side-item {
+                padding: 6px 0;  // Setting padding for each side navigation item
+                border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);  // Adding a bottom border to each side navigation item
 
-                .side-link{
-                    opacity: 0.9;
-                    transition: $transition;
-                    &:hover{
-                        color: $clr-orange;
+                .side-link {
+                    opacity: 0.9;  // Setting the opacity of the side navigation link to 0.9
+                    transition: $transition;  // Applying a transition effect using a variable named $transition
+
+                    &:hover {
+                        color: $clr-orange;  // Changing the color of the side navigation link on hover to a variable named $clr-orange
                     }
                 }
             }
         }
     }
 
-    @media screen and (min-width: 576px){
-        width: 280px;
+    @media screen and (min-width: 576px) {
+        width: 280px;  // Setting the width of the sidebar to 280px when the screen width is at least 576px
     }
 }

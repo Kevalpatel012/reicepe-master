@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react'; // Importing the React library
 
-const ErrorPage = () => {
+const ErrorPage = () => { // Defining a functional component called ErrorPage
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ErrorPage = () => {
   )
 }
 
-export default ErrorPage
+export default ErrorPage; // Exporting the ErrorPage component as the default export

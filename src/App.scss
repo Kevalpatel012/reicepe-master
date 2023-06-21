@@ -1,254 +1,280 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // variables
-$clr-black: #000;
-$clr-white: #fff;
-$font-raleway: 'Raleway', sans-serif;
-$clr-orange: #E16120;
-$clr-dark-orange: #C5541A;
-$clr-green: #3A9691;
-$clr-gray: #707070;
-$clr-dark-gray: #434343;
-$clr-dark: #232323;
-$clr-whitesmoke: #f5f5f5;
-$transition: all 300ms ease-in-out;
+$clr-black: #000;  /* Defining a variable for the color black */
+$clr-white: #fff;  /* Defining a variable for the color white */
+$font-raleway: 'Raleway', sans-serif;  /* Defining a variable for the font Raleway */
+$clr-orange: #E16120;  /* Defining a variable for the color orange */
+$clr-dark-orange: #C5541A;  /* Defining a variable for the color dark orange */
+$clr-green: #3A9691;  /* Defining a variable for the color green */
+$clr-gray: #707070;  /* Defining a variable for the color gray */
+$clr-dark-gray: #434343;  /* Defining a variable for the color dark gray */
+$clr-dark: #232323;  /* Defining a variable for the color dark */
+$clr-whitesmoke: #f5f5f5;  /* Defining a variable for the color whitesmoke */
+$transition: all 300ms ease-in-out;  /* Defining a variable for the transition */
 
 // global styles & resets
 *,
 *::after,
 *::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+  margin: 0; /* Sets margin of all elements to 0 */
+  padding: 0;  /* Sets padding of all elements to 0 */
+  box-sizing: border-box; /* Sets the box-sizing property of all elements to "border-box" 0 */
+  scroll-behavior: smooth; /* Sets the scroll-behavior property of all elements to "smooth" */
+}  /* Resetting margins, paddings, and box-sizing for all elements */
 
 html{
-  font-size: 10px;
+  font-size: 10px;  /* Setting the base font size to 10 pixels */
 }
 
 body{
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  color: $clr-black;
-  font-family: $font-raleway;
+  -webkit-font-smoothing: antialiased;  /* Smoothing the font in WebKit browsers */
+  font-size: 1.6rem;  /* Setting the base font size to 1.6 rem (16 pixels) */
+  line-height: 1.6;  /* Setting the line height to 1.6 */
+  color: $clr-black;  /* Setting the text color to the value of the $clr-black variable */
+  font-family: $font-raleway;  /* Setting the font family to the value of the $font-raleway variable */
 }
 
 ul{
-  list-style-type: none;
+  list-style-type: none;  /* Removing the bullet points from unordered lists */
 }
+
 a{
-  text-decoration: none;
-  color: unset;
+  text-decoration: none;  /* Removing the underline from links */
+  color: unset;  /* Resetting the color of links to the default */
 }
+
 img{
-  width: 100%;
-  display: block;
+  width: 100%;  /* Setting the width of images to 100% */
+  display: block;  /* Setting the display property of images to block */
 }
+
 .img-cover{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;  /* Setting the width of elements with the class "img-cover" to 100% */
+  height: 100%;  /* Setting the height of elements with the class "img-cover" to 100% */
+  object-fit: cover;  /* Scaling the content of elements with the class "img-cover" to cover the entire element */
 }
+
 button{
-  cursor: pointer;
-  outline: 0;
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 1.8rem;
+  cursor: pointer;  /* Changing the cursor to a pointer for buttons */
+  outline: 0;  /* Removing the outline when a button is focused */
+  border: none;  /* Removing the border from buttons */
+  background-color: transparent;  /* Setting the background color of buttons to transparent */
+  font-family: inherit;  /* Inheriting the font family from the parent element */
+  font-size: 1.8rem;  /* Setting the font size of buttons to 1.8 rem (18 pixels) */
 }
+
 input, textarea, select{
-  outline: 0;
-  border: none;
-  resize: none;
-  font-family: inherit;
-  font-size: 1.6rem;
+  outline: 0;  /* Removing the outline when an input, textarea, or select element is focused */
+  border: none;  /* Removing the border from input, textarea, and select elements */
+  resize: none;  /* Disabling the resizing of textarea elements */
+  font-family: inherit;  /* Inheriting the font family from the parent element */
+  font-size: 1.6rem;  /* Setting the font size of input, textarea, and select elements to 1.6 rem (16 pixels) */
 }
 
 /* custom utility classes */
 .container{
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 1320px;  /* Setting the maximum width of elements with the class "container" to 1320 pixels */
+  margin: 0 auto;  /* Centering elements with the class "container" horizontally */
+  padding: 0 2rem;  /* Adding 0 padding at the top and bottom, and 2 rem (20 pixels) padding on the left and right */
 }
 
 /* flexbox and grid */
 .flex{
-  display: flex;
-  &-column{ flex-direction: column;}
-  &-wrap{flex-wrap: wrap;}
+  display: flex;  /* Displaying elements with the class "flex" as flex containers */
+  &-column{ flex-direction: column;}  /* Setting the flex-direction of elements with the class "flex-column" to column */
+  &-wrap{flex-wrap: wrap;}  /* Setting the flex-wrap of elements with the class "flex-wrap" to wrap */
 }
+
 .align{
-  &-center{align-items: center;}
-  &-start{align-items: flex-start;}
-  &-end{align-items: flex-end;}
-  &-stretch{align-items: stretch;}
+  &-center{align-items: center;}  /* Centering the items vertically within elements with the class "align-center" */
+  &-start{align-items: flex-start;}  /* Aligning the items to the start vertically within elements with the class "align-start" */
+  &-end{align-items: flex-end;}  /* Aligning the items to the end vertically within elements with the class "align-end" */
+  &-stretch{align-items: stretch;}  /* Stretching the items vertically within elements with the class "align-stretch" */
 }
+
 .justify{
-  &-center{justify-content: center;}
-  &-between{ justify-content: space-between;}
-  &-start{ justify-content: flex-start;}
-  &-end{ justify-content: flex-end;}
+  &-center{justify-content: center;}  /* Centering the items horizontally within elements with the class "justify-center" */
+  &-between{ justify-content: space-between;}  /* Distributing the items evenly horizontally within elements with the class "justify-between" */
+  &-start{ justify-content: flex-start;}  /* Aligning the items to the start horizontally within elements with the class "justify-start" */
+  &-end{ justify-content: flex-end;}  /* Aligning the items to the end horizontally within elements with the class "justify-end" */
 }
-.grid{ display: grid; }
+
+.grid{ display: grid; }  /* Displaying elements with the class "grid" as grid containers */
 
 /* height and width */
-.h-100{height: 100%;}
-.w-100{width: 100%;}
+.h-100{height: 100%;}  /* Setting the height of elements with the class "h-100" to 100% */
+.w-100{width: 100%;}  /* Setting the width of elements with the class "w-100" to 100% */
 
 /* text align, transformation & colors */
+
 .text{
-  &-center{text-align: center;}
-  &-start{text-align: left;}
-  &-end{text-align: right;}
-  &-justify{text-align: justify;}
-  &-uppercase{text-transform: uppercase;}
-  &-capitalize{text-transform: capitalize;}
-  &-white{color: $clr-white;}
-  &-black{color: $clr-black;}
-  &-orange{color: $clr-orange;}
-  &-green{color: $clr-green;}
-  &-gray{color: $clr-gray;}
-  &-dark-gray{color: $clr-dark-gray;}
-  &-dark{color: $clr-dark;}
-  &-whitesmoke{color: $clr-whitesmoke;}
+  &-center{text-align: center;}  // Applies center alignment to text
+  &-start{text-align: left;}  // Applies left alignment to text
+  &-end{text-align: right;}  // Applies right alignment to text
+  &-justify{text-align: justify;}  // Applies justified alignment to text
+  &-uppercase{text-transform: uppercase;}  // Transforms text to uppercase
+  &-capitalize{text-transform: capitalize;}  // Capitalizes the first letter of each word in the text
+  &-white{color: $clr-white;}  // Applies white color to text
+  &-black{color: $clr-black;}  // Applies black color to text
+  &-orange{color: $clr-orange;}  // Applies orange color to text
+  &-green{color: $clr-green;}  // Applies green color to text
+  &-gray{color: $clr-gray;}  // Applies gray color to text
+  &-dark-gray{color: $clr-dark-gray;}  // Applies dark gray color to text
+  &-dark{color: $clr-dark;}  // Applies dark color to text
+  &-whitesmoke{color: $clr-whitesmoke;}  // Applies whitesmoke color to text
 }
+
 .bg{
-  &-black{background-color: $clr-black;}
-  &-white{background-color: $clr-white;}
-  &-orange{background-color: $clr-orange;}
-  &-green{background-color: $clr-green;}
-  &-gray{background-color: $clr-gray;}
-  &-dark-gray{background-color: $clr-dark-gray;}
-  &-dark{background-color: $clr-dark;}
-  &-whitesmoke{background-color: $clr-whitesmoke;}
+  &-black{background-color: $clr-black;}  // Sets black background color
+  &-white{background-color: $clr-white;}  // Sets white background color
+  &-orange{background-color: $clr-orange;}  // Sets orange background color
+  &-green{background-color: $clr-green;}  // Sets green background color
+  &-gray{background-color: $clr-gray;}  // Sets gray background color
+  &-dark-gray{background-color: $clr-dark-gray;}  // Sets dark gray background color
+  &-dark{background-color: $clr-dark;}  // Sets dark background color
+  &-whitesmoke{background-color: $clr-whitesmoke;}  // Sets whitesmoke background color
 }
 
 /* font weights */
+
 .fw{
-  &-1{font-weight: 100;}
-  &-2{font-weight: 200;}
-  &-3{font-weight: 300;}
-  &-4{font-weight: 400;}
-  &-5{font-weight: 500;}
-  &-6{font-weight: 600;}
-  &-7{font-weight: 700;}
-  &-8{font-weight: 800;}
-  &-9{font-weight: 900;}
+  &-1{font-weight: 100;}  // Sets font weight to 100
+  &-2{font-weight: 200;}  // Sets font weight to 200
+  &-3{font-weight: 300;}  // Sets font weight to 300
+  &-4{font-weight: 400;}  // Sets font weight to 400
+  &-5{font-weight: 500;}  // Sets font weight to 500
+  &-6{font-weight: 600;}  // Sets font weight to 600
+  &-7{font-weight: 700;}  // Sets font weight to 700
+  &-8{font-weight: 800;}  // Sets font weight to 800
+  &-9{font-weight: 900;}  // Sets font weight to 900
 }
 
 /* common font sizes */
+
 .fs{
-  &-11{font-size: 11px;}
-  &-12{font-size: 12px;}
-  &-13{font-size: 13px;}
-  &-14{font-size: 14px;}
-  &-15{font-size: 15px;}
-  &-16{font-size: 16px;}
-  &-17{font-size: 17px;}
-  &-18{font-size: 18px;}
-  &-19{font-size: 19px;}
-  &-20{font-size: 20px;}
-  &-21{font-size: 21px;}
-  &-22{font-size: 22px;}
-  &-23{font-size: 23px;}
-  &-24{font-size: 24px;}
-  &-25{font-size: 25px;}
-  &-26{font-size: 26px;}
+  &-11{font-size: 11px;}  // Sets font size to 11 pixels
+  &-12{font-size: 12px;}  // Sets font size to 12 pixels
+  &-13{font-size: 13px;}  // Sets font size to 13 pixels
+  &-14{font-size: 14px;}  // Sets font size to 14 pixels
+  &-15{font-size: 15px;}  // Sets font size to 15 pixels
+  &-16{font-size: 16px;}  // Sets font size to 16 pixels
+  &-17{font-size: 17px;}  // Sets font size to 17 pixels
+  &-18{font-size: 18px;}  // Sets font size to 18 pixels
+  &-19{font-size: 19px;}  // Sets font size to 19 pixels
+  &-20{font-size: 20px;}  // Sets font size to 20 pixels
+  &-21{font-size: 21px;}  // Sets font size to 21 pixels
+  &-22{font-size: 22px;}  // Sets font size to 22 pixels
+  &-23{font-size: 23px;}  // Sets font size to 23 pixels
+  &-24{font-size: 24px;}  // Sets font size to 24 pixels
+  &-25{font-size: 25px;}  // Sets font size to 25 pixels
+  &-26{font-size: 26px;}  // Sets font size to 26 pixels
 }
 
 /* letter spacing */
-.ls-1{letter-spacing: 1px;}
-.ls-2{letter-spacing: 2px;}
+
+.ls-1{letter-spacing: 1px;}  // Sets letter spacing to 1 pixel
+.ls-2{letter-spacing: 2px;}  // Sets letter spacing to 2 pixels
 
 /* margin and padding */
+
 .mx-auto{
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: auto; /* Sets the right margin of the element to "auto" */
+    margin-left: auto; /* Sets the left margin of the element to "auto" */
 }
 
-.py-1{padding-top: 4px; padding-bottom: 4px;}
-.py-2{padding-top: 8px; padding-bottom: 8px;}
-.py-3{padding-top: 16px; padding-bottom: 16px;}
-.py-4{padding-top: 24px; padding-bottom: 24px;}
-.py-5{padding-top: 48px; padding-bottom: 48px;}
-.py-6{padding-top: 60px; padding-bottom: 60px;}
-.py-7{padding-top: 72px; padding-bottom: 72px;}
+.py-1{padding-top: 4px; padding-bottom: 4px;}  // Sets vertical padding of 4 pixels
+.py-2{padding-top: 8px; padding-bottom: 8px;}  // Sets vertical padding of 8 pixels
+.py-3{padding-top: 16px; padding-bottom: 16px;}  // Sets vertical padding of 16 pixels
+.py-4{padding-top: 24px; padding-bottom: 24px;}  // Sets vertical padding of 24 pixels
+.py-5{padding-top: 48px; padding-bottom: 48px;}  // Sets vertical padding of 48 pixels
+.py-6{padding-top: 60px; padding-bottom: 60px;}  // Sets vertical padding of 60 pixels
+.py-7{padding-top: 72px; padding-bottom: 72px;}  // Sets vertical padding of 72 pixels
 
-.px-1{padding-left: 4px; padding-right: 4px;}
-.px-2{padding-left: 8px; padding-right: 8px;}
-.px-3{padding-left: 16px; padding-right: 16px;}
-.px-4{padding-left: 24px; padding-right: 24px;}
-.px-5{padding-left: 48px; padding-right: 48px;}
-.px-6{padding-left: 60px; padding-right: 60px;}
-.px-7{padding-left: 72px; padding-right: 72px;}
+.px-1{padding-left: 4px; padding-right: 4px;}  // Sets horizontal padding of 4 pixels
+.px-2{padding-left: 8px; padding-right: 8px;}  // Sets horizontal padding of 8 pixels
+.px-3{padding-left: 16px; padding-right: 16px;}  // Sets horizontal padding of 16 pixels
+.px-4{padding-left: 24px; padding-right: 24px;}  // Sets horizontal padding of 24 pixels
+.px-5{padding-left: 48px; padding-right: 48px;}  // Sets horizontal padding of 48 pixels
+.px-6{padding-left: 60px; padding-right: 60px;}  // Sets horizontal padding of 60 pixels
+.px-7{padding-left: 72px; padding-right: 72px;}  // Sets horizontal padding of 72 pixels
 
-.my-1{margin-top: 4px; margin-bottom: 4px;}
-.my-2{margin-top: 8px; margin-bottom: 8px;}
-.my-3{margin-top: 16px; margin-bottom: 16px;}
-.my-4{margin-top: 24px; margin-bottom: 24px;}
-.my-5{margin-top: 48px; margin-bottom: 48px;}
-.my-6{margin-top: 60px; margin-bottom: 60px;}
+.my-1{margin-top: 4px; margin-bottom: 4px;}  // Sets vertical margin of 4 pixels
+.my-2{margin-top: 8px; margin-bottom: 8px;}  // Sets vertical margin of 8 pixels
+.my-3{margin-top: 16px; margin-bottom: 16px;}  // Sets vertical margin of 16 pixels
+.my-4{margin-top: 24px; margin-bottom: 24px;}  // Sets vertical margin of 24 pixels
+.my-5{margin-top: 48px; margin-bottom: 48px;}  // Sets vertical margin of 48 pixels
+.my-6{margin-top: 60px; margin-bottom: 60px;}  // Sets vertical margin of 60 pixels
 
-.mx-1{margin-left: 4px; margin-right: 4px;}
-.mx-2{margin-left: 8px; margin-right: 8px;}
-.mx-3{margin-left: 16px; margin-right: 16px;}
-.mx-4{margin-left: 24px; margin-right: 24px;}
-.mx-5{margin-left: 48px; margin-right: 48px;}
-.mx-6{margin-left: 60px; margin-right: 60px;}
+.mx-1{margin-left: 4px; margin-right: 4px;}  // Sets horizontal margin of 4 pixels
+.mx-2{margin-left: 8px; margin-right: 8px;}  // Sets horizontal margin of 8 pixels
+.mx-3{margin-left: 16px; margin-right: 16px;}  // Sets horizontal margin of 16 pixels
+.mx-4{margin-left: 24px; margin-right: 24px;}  // Sets horizontal margin of 24 pixels
+.mx-5{margin-left: 48px; margin-right: 48px;}  // Sets horizontal margin of 48 pixels
+.mx-6{margin-left: 60px; margin-right: 60px;}  // Sets horizontal margin of 60 pixels
 
 // section
+
 .main-holder{
   overflow-x: hidden;
 }
-.section-wrapper{
-  padding: 80px 0;
-}
-.sc-title{
-  text-transform: uppercase;
-  margin-bottom: 4.8rem;
-  font-weight: bold;
-  letter-spacing: 4px;
-  position: relative;
-  font-size: 24px;
-  padding: 4px 0;
-  position: relative;
 
-  &::after{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height: 4px;
-    width: 80px;
-    background-color: $clr-orange;
+.section-wrapper{
+  padding: 80px 0;  // Sets padding of 80 pixels at the top and bottom
+}
+
+.sc-title{
+  text-transform: uppercase;  // Transforms text to uppercase
+  margin-bottom: 4.8rem;  // Sets bottom margin of 4.8rem (or 48 pixels)
+  font-weight: bold;  // Sets font weight to bold
+  letter-spacing: 4px;  // Sets letter spacing to 4 pixels
+  position: relative;  // Sets position to relative
+  font-size: 24px;  // Sets font size to 24 pixels
+  padding: 4px 0;  // Sets padding of 4 pixels at the top and bottom
+  position: relative;  // Sets position to relative
+
+  &::after{  // Pseudo-element used for styling
+    content: "";  // Empty content
+    position: absolute;  // Sets position to absolute
+    top: 100%;  // Positions the element at the bottom of the parent element
+    left: 0;  // Positions the element at the left of the parent element
+    height: 4px;  // Sets height of the element to 4 pixels
+    width: 80px;  // Sets width of the element to 80 pixels
+    background-color: $clr-orange;  // Sets background color to orange
   }
 }
 
 // opacity
+
 .op{
-  &-01{ opacity: 0.1;}
-  &-02{ opacity: 0.2;}
-  &-03{ opacity: 0.3;}
-  &-04{ opacity: 0.4;}
-  &-05{ opacity: 0.5;}
-  &-06{ opacity: 0.6;}
-  &-07{ opacity: 0.7;}
-  &-08{ opacity: 0.8;}
-  &-09{ opacity: 0.9;}
+  &-01{ opacity: 0.1;}  // Sets opacity to 0.1
+  &-02{ opacity: 0.2;}  // Sets opacity to 0.2
+  &-03{ opacity: 0.3;}  // Sets opacity to 0.3
+  &-04{ opacity: 0.4;}  // Sets opacity to 0.4
+  &-05{ opacity: 0.5;}  // Sets opacity to 0.5
+  &-06{ opacity: 0.6;}  // Sets opacity to 0.6
+  &-07{ opacity: 0.7;}  // Sets opacity to 0.7
+  &-08{ opacity: 0.8;}  // Sets opacity to 0.8
+  &-09{ opacity: 0.9;}  // Sets opacity to 0.9
+  &-1{ opacity: 1;}  // Sets opacity to 1 (fully opaque)
 }
 
-.breadcrumb{
-  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-  padding: 1rem 2rem;
-  margin-bottom: 3.2rem;
 
-  li{
-    transition: $transition;
-    &:hover{
-      opacity: 0.9;
+.breadcrumb {
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px; /* Applies a box shadow to the breadcrumb element */
+  
+  padding: 1rem 2rem; /* Adds padding of 1rem (16px) on the top and bottom, and 2rem (32px) on the left and right */
+
+  margin-bottom: 3.2rem; /* Sets a bottom margin of 3.2rem (51.2px) for the breadcrumb element */
+
+  li { /* Selects the list items within the breadcrumb element */
+
+    transition: $transition; /* Sets the transition property for list items to use the value defined in the $transition variable */
+    
+    &:hover { /* Applies styles to list items when hovered over */
+
+      opacity: 0.9; /* Changes the opacity of the list item to 0.9 when hovered over */
     }
   }
 }

@@ -1,76 +1,77 @@
-@import "../../App.scss";
-.navbar{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    height: 60px;
-    position: relative;
-    z-index: 999;
-    transition: $transition;
+@import "../../App.scss"; // Importing the global styles
 
-    .navbar-brand-text{
-        margin-left: 5px;
-    }
-    .navbar-search-btn{
-        margin-right: 12px;
-    }
-}
+.navbar {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; // Box shadow for the navbar
+    height: 60px; // Height of the navbar
+    position: relative; // Positioning of the navbar
+    z-index: 999; // z-index of the navbar
+    transition: $transition; // Transition property
 
-.scrolled{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.header{
-    .header-content{
-        height: 400px;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image.jpg") center/cover no-repeat;
+    .navbar-brand-text {
+        margin-left: 5px; // Margin for the navbar brand text
     }
-    .header-title{
-        margin-top: 2.4rem;
+    .navbar-search-btn {
+        margin-right: 12px; // Margin for the navbar search button
     }
 }
 
-.search-form{
-    .form-control-input{
-        box-shadow: 0 4px 10px rgb(0 0 0 / 12%), 0 0 1px rgb(0 0 0 / 5%) inset;
-        min-width: 300px;
-        font-size: 16px;
-        height: 55px;
-        padding: 0px 3.2rem;
-        border-radius: 2.8rem!important;
-        margin-right: 1.2rem;
-    }
-    .form-submit-btn{
-        width: 55px;
-        height: 55px;
-        background-color: $clr-orange;
-        border-radius: 50%;
-        position: relative;
-        transition: $transition;
+.scrolled {
+    position: fixed; // Positioning of the element when scrolled
+    top: 0; // Top position when scrolled
+    left: 0; // Left position when scrolled
+    width: 100%; // Width of the element when scrolled
+}
 
-        .btn-icon{
-            transition: $transition;
+.header {
+    .header-content {
+        height: 400px; // Height of the header content
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image.jpg") center/cover no-repeat; // Background styling for the header content
+    }
+    .header-title {
+        margin-top: 2.4rem; // Margin top for the header title
+    }
+}
+
+.search-form {
+    .form-control-input {
+        box-shadow: 0 4px 10px rgb(0 0 0 / 12%), 0 0 1px rgb(0 0 0 / 5%) inset; // Box shadow for the form control input
+        min-width: 300px; // Minimum width of the form control input
+        font-size: 16px; // Font size of the form control input
+        height: 55px; // Height of the form control input
+        padding: 0px 3.2rem; // Padding of the form control input
+        border-radius: 2.8rem!important; // Border radius of the form control input
+        margin-right: 1.2rem; // Margin right for the form control input
+    }
+    .form-submit-btn {
+        width: 55px; // Width of the form submit button
+        height: 55px; // Height of the form submit button
+        background-color: $clr-orange; // Background color of the form submit button
+        border-radius: 50%; // Border radius of the form submit button
+        position: relative; // Positioning of the form submit button
+        transition: $transition; // Transition property
+
+        .btn-icon {
+            transition: $transition; // Transition property for the button icon
         }
 
-        &:after{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            border: 1px solid $clr-white;
-            border-radius: 50%;
+        &:after {
+            content: ""; // Content property for the pseudo-element
+            position: absolute; // Positioning of the pseudo-element
+            top: 50%; // Top position of the pseudo-element
+            left: 50%; // Left position of the pseudo-element
+            transform: translate(-50%, -50%); // Transform positioning of the pseudo-element
+            width: 100%; // Width of the pseudo-element
+            height: 100%; // Height of the pseudo-element
+            border: 1px solid $clr-white; // Border styling for the pseudo-element
+            border-radius: 50%; // Border radius of the pseudo-element
         }
 
-        &:hover{
-            .btn-icon{
-                transform: scale(0.9);
-                color: $clr-orange;
+        &:hover {
+            .btn-icon {
+                transform: scale(0.9); // Scale transform on hover for the button icon
+                color: $clr-orange; // Color change on hover for the button icon
             }
-            background: $clr-white;
+            background: $clr-white; // Background change on hover for the form submit button
         }
     }
 }

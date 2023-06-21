@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import "./CategoryPage.scss";
 import { useMealContext } from '../../context/mealContext';
 import MealList from '../../components/Meal/MealList';
@@ -6,16 +6,23 @@ import { useParams } from 'react-router-dom';
 import { startFetchMealByCategory } from '../../actions/mealsActions';
 
 const CategoryPage = () => {
-  const {name} = useParams();
+  // Retrieves the dynamic parameter from the URL
+  const { name } = useParams();
+  
+  // Accesses the meal context and extracts the necessary values and functions
   const { categoryMeals, dispatch, categories } = useMealContext();
+  
+  // Initializes the variable to store the category description
   let catDescription = "";
-
-  if(categories){
+  
+  // Iterates over the categories and finds the one with matching name to retrieve its description
+  if (categories) {
     categories.forEach(category => {
-      if(category?.strCategory === name) catDescription = category?.strCategoryDescription;
+      if (category?.strCategory === name) catDescription = category?.strCategoryDescription;
     })
   }
-
+  
+  // Fetches the meals based on the selected category upon component mount and whenever 'name' or 'dispatch' change
   useEffect(() => {
     startFetchMealByCategory(dispatch, name);
   }, [name, dispatch]);
@@ -29,10 +36,11 @@ const CategoryPage = () => {
         </div>
       </div>
       {
-        (categoryMeals?.length) ? <MealList meals = { categoryMeals } /> : null
+        // Renders the MealList component if categoryMeals exist, otherwise renders null
+        (categoryMeals?.length) ? <MealList meals={categoryMeals} /> : null
       }
     </main>
   )
 }
 
-export default CategoryPage
+export default CategoryPage;

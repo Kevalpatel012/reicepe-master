@@ -1,9 +1,9 @@
-@import "../../App.scss";
-.cat-description{
-    background-color: rgba(0, 0, 0, 0.02);
-    border: 1px solid $clr-orange;
-    p{
-        margin-top: 12px;
-    }
-    
+@import "../../App.scss"; // Importing styles and variables from the App.scss file
+
+.cat-description {
+  background-color: rgba(0, 0, 0, 0.02); // Setting the background color to a slightly transparent black
+  border: 1px solid $clr-orange; // Setting a 1px solid border with the color defined by the $clr-orange variable
+  p {
+    margin-top: 12px; // Adding a top margin of 12px to paragraphs within .cat-description
+  }
 }
