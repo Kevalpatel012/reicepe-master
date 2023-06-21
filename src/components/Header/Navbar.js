@@ -29,7 +29,7 @@ const Navbar = () => {  // Declaring a functional component called Navbar
           <div className='brand-and-toggler flex align-center justify-between'  /* Brand and toggler div with flex classes */ >
             <Link to = "/" className='navbar-brand fw-3 fs-22 flex align-center'  /* Link component to the home page with navbar-brand class and flex classes */ >
               <MdFoodBank  /* MdFoodBank icon component */ />
-              <span className='navbar-brand-text fw-7'>RecipeRhapsody</span>  
+              <span className='navbar-brand-text fw-7'>SpiceSavvy</span>  
             </Link>
             <div className='navbar-btns flex align-center'  /* Navbar buttons div with flex classes*/ >
               <button type="button" className='navbar-show-btn text-white' onClick={() => openSidebar()}  /* Button to show the sidebar with navbar-show-btn and text-white classes */ >
