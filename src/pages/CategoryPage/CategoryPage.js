@@ -17,12 +17,15 @@ const CategoryPage = () => {
   
   // Iterates over the categories and finds the one with matching name to retrieve its description
   if (categories) {
-    categories.forEach(category => {
+    categories.forEach(category => {  // iterates over each item (category) in the categories array.
       if (category?.strCategory === name) catDescription = category?.strCategoryDescription;
+      // Checks if the current category object's strCategory property is equal to the value of the name variable. 
+      // If the condition is true, it assigns the value of the strCategoryDescription property from the current category object to the catDescription variable.
     })
   }
   
   // Fetches the meals based on the selected category upon component mount and whenever 'name' or 'dispatch' change
+  //Go and get the info based of the catagory the user picked
   useEffect(() => {
     startFetchMealByCategory(dispatch, name);
   }, [name, dispatch]);

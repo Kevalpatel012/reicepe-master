@@ -1,3 +1,5 @@
+/* THIS PRINT OUTS THE MEALS IN EACH CATAGORY*/
+
 import React from 'react';  // Importing the necessary module from React
 
 import "./Meal.scss";  // Importing custom styles from Meal.scss
@@ -10,7 +12,8 @@ const MealList = ({ meals }) => {  // Declaring a functional component called Me
   return (  // Returning JSX elements
     <div className='section-wrapper' /* Wrapper div with the section-wrapper class */ >
       <div className='container'  /* Container div */ >
-        <div className='sc-title'>meals </div> 
+        {/* andles the Meals section in each category*/}
+        <div className='sc-title'>Meals </div> 
         <section className='sc-meal grid'  /* Section with the sc-meal and grid classes */ >
           {  // Beginning of the JavaScript expression
             meals?.map(mealItem => {  // Mapping over the "meals" array if it exists

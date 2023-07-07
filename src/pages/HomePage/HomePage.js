@@ -24,6 +24,9 @@ const HomePage = () => {
           If meals has a length greater than 0 (i.e., there are meals available), it renders the <MealList /> component and 
           passes the meals array as a prop to display the list of meals.
           If none of the conditions match, it renders an empty string. */}
+
+      {/* This line under finds the meals in each catagory and prints it out
+      */}
       { (mealsLoading) ? <Loader /> : (meals === null) ? <NotFound /> : (meals?.length) ? <MealList meals = {meals} /> : "" }
       
       {/* Conditional rendering based on category loading state */}

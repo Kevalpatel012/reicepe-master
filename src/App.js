@@ -19,7 +19,10 @@ Routes: This component acts as a container for defining your application's route
 individual <Route> components to map specific URLs to corresponding components.
 
 Route: This component represents a single route in your application. It defines the URL path and specifies which component should 
-be rendered when the URL matches that path.*/
+be rendered when the URL matches that path.
+
+We are using route because it allows you to determine what content is displayed to the user based on the current URL or path
+*/
 
 import {
   BrowserRouter,

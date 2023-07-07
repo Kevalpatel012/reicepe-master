@@ -1,3 +1,4 @@
+/* THIS FILE FINDS EACH MEALS INFO*/
 import React, { useEffect } from 'react'; // Importing React and the useEffect hook
 import { useParams } from 'react-router-dom'; // Importing useParams from react-router-dom
 import "./MealDetailsPage.scss"; // Importing styles specific to MealDetailsPage
@@ -16,15 +17,15 @@ const MealDetailsPage = () => {
   }, [id]);
 
   let ingredientsArr = [], measuresArr = [], singleMeal = {}; // Declaring variables to store ingredients, measures, and single meal details
-  if (meal && meal?.length > 0) {
-    for (let props in meal[0]) {
-      if (props.includes('strIngredient')) {
-        if (meal[0][props]) ingredientsArr.push(meal[0][props]); // Adding non-empty ingredient values to the ingredients array
+  if (meal && meal?.length > 0) { // Checks if the meal variable is truthy and has a length greater than 0. 
+    for (let props in meal[0]) { // This line initiates a loop over the properties (props) of the first item (meal[0]) in the meal array.
+      if (props.includes('strIngredient')) { // Checks if the current property (props) includes the string 'strIngredient'
+        if (meal[0][props]) ingredientsArr.push(meal[0][props]); // If the current ingredient property has a truthy value (i.e., not null, undefined, or empty), it is added to the ingredientsArr array.
       }
 
-      if (props.includes('strMeasure')) {
-        if (meal[0][props]) {
-          if (meal[0][props].length > 1) {
+      if (props.includes('strMeasure')) { // Checks if the current property (props) includes the string 'strMeasure'
+        if (meal[0][props]) { // Checks if the current measure property has a truthy value (i.e., not null, undefined, or empty).
+          if (meal[0][props].length > 1) { // If the length of the current measure property value is greater than 1
             measuresArr.push(meal[0][props]); // Adding non-empty measure values to the measures array
           }
         }

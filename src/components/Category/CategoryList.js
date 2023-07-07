@@ -1,5 +1,8 @@
 /*
 
+THIS PRINTS OUT THE CATORIES IN THE MAIN PAGE WITH THE PICTUEAS AND THE NAMES
+
+
 It defines a functional component named CategoryList that accepts a prop called "categories".
 The CategoryList component renders the following elements:
 

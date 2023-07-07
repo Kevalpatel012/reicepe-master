@@ -1,3 +1,5 @@
+/* THIS HANDLES EACH MEALS INDIVIDUAL PAGE*/
+
 import React from 'react';  // Importing the necessary module from React
 
 import "./Meal.scss";  // Importing custom styles from Meal.scss
@@ -32,7 +34,7 @@ const MealSingle = ({ meal }) => {  // Declaring a functional component called M
               </Link>
             </li>
             <li className='flex align-center mx-1' /* Breadcrumb separator */ >
-              <BiChevronsRight size={23} /* Right chevron icon */ />
+              <BiChevronsRight size={23} /* Home icon right above the meal details that takes you back home */ />
             </li>
             <li className='breadcrumb-item flex' /* Breadcrumb item */ >
               <span to="" className='fs-15 fw-5 text-uppercase'>{meal?.title /* Meal title */}</span>  
