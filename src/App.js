@@ -12,6 +12,15 @@
 import './App.scss';
 
 // Importing the necessary components from 'react-router-dom'
+/*BrowserRouter: This component provides the routing functionality for your React application. It uses HTML5 history API to keep the UI 
+in sync with the current URL.
+
+Routes: This component acts as a container for defining your application's routes. Inside the <Routes> component, you can define 
+individual <Route> components to map specific URLs to corresponding components.
+
+Route: This component represents a single route in your application. It defines the URL path and specifies which component should 
+be rendered when the URL matches that path.*/
+
 import {
   BrowserRouter,
   Routes,

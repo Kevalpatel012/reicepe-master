@@ -1,3 +1,18 @@
+/*
+This file contains various functions that make API requests and dispatch actions to update the state in a Redux store. 
+
+This file imports the necessary dependencies, including the Axios library for making API requests and action types from another file.
+This file imports URL constants that define the API endpoints used in the API requests.
+This file exports several functions, each responsible for fetching data from the API and dispatching corresponding actions.
+The startFetchCategories function fetches the categories and dispatches actions related to the category data.
+The startFetchSingleMeal function fetches a single meal by ID and dispatches actions related to the meal data.
+The startFetchMealByCategory function fetches meals based on a specific category and dispatches actions related to the meals data.
+The startFetchMealsBySearch function fetches meals based on a search term and dispatches actions related to the meals data.
+
+Each function dispatches different types of actions (e.g., FETCH_CATEGORY_BEGIN, FETCH_CATEGORY_SUCCESS, etc.) to indicate the status
+of the API request and the corresponding data received or any error that occurred.
+*/
+
 import axios from "../api/axios";  // Importing the axios library for making API requests
 import {
     FETCH_CATEGORY_BEGIN,

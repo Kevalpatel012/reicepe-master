@@ -19,9 +19,17 @@ const HomePage = () => {
     <main className='main-content'> {/* Main content container */}
       
       {/* Conditional rendering based on loading state and meal availability */}
+      {/* If mealsLoading is true, it renders the <Loader /> component, indicating that the meals are currently being loaded.
+          If meals is null, it renders the <NotFound /> component, indicating that no meals were found.
+          If meals has a length greater than 0 (i.e., there are meals available), it renders the <MealList /> component and 
+          passes the meals array as a prop to display the list of meals.
+          If none of the conditions match, it renders an empty string. */}
       { (mealsLoading) ? <Loader /> : (meals === null) ? <NotFound /> : (meals?.length) ? <MealList meals = {meals} /> : "" }
       
       {/* Conditional rendering based on category loading state */}
+      {/* It checks if categoryLoading is true and renders the <Loader /> component if it is. 
+      Otherwise, it renders the <CategoryList /> component and passes the categories array as a prop to display the list of 
+      categories. */}
       { (categoryLoading) ? <Loader /> : <CategoryList categories = {categories} /> }
       
     </main>

@@ -1,3 +1,24 @@
+/*
+It imports the App.scss stylesheet using @import "../../App.scss";. This allows the file to use styles defined in the App.scss file.
+
+The code defines styles for the .sc-category class, which is likely used to style the category section.
+
+Within the .sc-category class, media queries are used to apply different styles based on the screen width:
+
+For screens with a minimum width of 420px, the grid-template-columns property is set to repeat(2, 1fr), creating a grid layout with two columns. The column-gap is set to 24px.
+For screens with a minimum width of 576px, the grid-template-columns property is set to repeat(3, 1fr), creating a grid layout with three columns.
+For screens with a minimum width of 992px, the grid-template-columns property is set to repeat(4, 1fr), creating a grid layout with four columns.
+For screens with a minimum width of 1080px, the grid-template-columns property is set to repeat(5, 1fr), creating a grid layout with five columns.
+The code defines styles for the .category-itm class, which likely represents an individual category item within the category section.
+
+The .category-itm class sets various styles such as background color, positioning, margin, box shadow, and border radius for the category item.
+The .category-itm-img class represents the category item image and sets the height and positioning for the image.
+The nested img selector sets padding and transition effects for the category item image.
+When hovering over the category item, the image scales down slightly using the transform property.
+The .category-itm-title class represents the category item title and sets positioning, padding, border radius, and box shadow for the title.
+When hovering over the category item, the opacity and border radius of the title change using the opacity and border-radius properties.
+*/
+
 @import "../../App.scss"; // Importing the App.scss stylesheet
 
 .sc-category {
