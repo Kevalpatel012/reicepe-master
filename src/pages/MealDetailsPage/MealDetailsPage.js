@@ -17,10 +17,10 @@ const MealDetailsPage = () => {
   }, [id]);
 
   let ingredientsArr = [], measuresArr = [], singleMeal = {}; // Declaring variables to store ingredients, measures, and single meal details
-  if (meal && meal?.length > 0) { // Checks if the meal variable is truthy and has a length greater than 0. 
+  if (meal && meal?.length > 0) { // Checks if the meal variable is not null, undefined, or empty and has a length greater than 0. 
     for (let props in meal[0]) { // This line initiates a loop over the properties (props) of the first item (meal[0]) in the meal array.
       if (props.includes('strIngredient')) { // Checks if the current property (props) includes the string 'strIngredient'
-        if (meal[0][props]) ingredientsArr.push(meal[0][props]); // If the current ingredient property has a truthy value (i.e., not null, undefined, or empty), it is added to the ingredientsArr array.
+        if (meal[0][props]) ingredientsArr.push(meal[0][props]); // If the current ingredient property is not null, undefined, or empty, it then is added to the ingredientsArr array.
       }
 
       if (props.includes('strMeasure')) { // Checks if the current property (props) includes the string 'strMeasure'

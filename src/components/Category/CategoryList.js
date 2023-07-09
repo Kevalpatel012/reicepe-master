@@ -37,6 +37,7 @@ const CategoryList = ({ categories }) => {
               const { idCategory: id, strCategory: title, strCategoryThumb: thumbnail } = category; // Destructuring category object properties
 
               return (
+                // To send it to a specific url it is set to /meal/category/${title}, where title is a dynamic value representing the category
                 <Link to={`/meal/category/${title}`} className="category-itm align-center justify-center" key={id}> {/* Link component with 'category-itm', 'align-center', and 'justify-center' classes */}
                   <div className='category-itm-img h-100 w-100 flex align-center justify-center'> {/* Div for category item image */}
                     <img src={thumbnail} alt={title} /> {/* Image tag for the category thumbnail */}

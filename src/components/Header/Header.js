@@ -28,10 +28,10 @@ const Header = () => {
   return (
     <header className='header'> {/* Header component */}
       <Navbar /> {/* Rendering the Navbar component */}
-      <div className='header-content flex align-center justify-center flex-column text-center'>
+      <div className='header-content flex align-center justify-center flex-column text-center'> {/* Handles the positioning of the entire seasarch section*/}
         <SearchForm /> {/* Rendering the SearchForm component */}
         <h1 className='text-white header-title ls-2'>What are your favorite cuisines?</h1> {/* Heading for the header */}
-        <p className='text-uppercase text-white my-3 ls-1'>personalize your experience</p> {/* Subtitle for the header */}
+        <p className='text-uppercase text-white my-3 ls-1'>personalize your experience</p> {/* Subtitle for the header also sets vertical margins of 3 and line spacing of 1*/}
       </div>
     </header>
   )

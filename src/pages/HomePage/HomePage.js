@@ -33,6 +33,7 @@ const HomePage = () => {
       {/* It checks if categoryLoading is true and renders the <Loader /> component if it is. 
       Otherwise, it renders the <CategoryList /> component and passes the categories array as a prop to display the list of 
       categories. */}
+      {/*Prints out each catagory*/}
       { (categoryLoading) ? <Loader /> : <CategoryList categories = {categories} /> }
       
     </main>

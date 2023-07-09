@@ -69,6 +69,7 @@ export const startFetchMealsBySearch = async (dispatch, searchTerm) => {
     try {
         dispatch({ type: FETCH_MEALS_BEGIN });  // Dispatching a "FETCH_MEALS_BEGIN" action
         const response = await axios.get(`${SEARCH_URL}${searchTerm}`);  // Making a GET request to the meals by search endpoint with the provided search term
+        /* Search URL holds the beginning part of the api endpoint ande the search term holds what we are looking for*/
         dispatch({ type: FETCH_MEALS_SUCCESS, payload: response.data.meals });  // Dispatching a "FETCH_MEALS_SUCCESS" action with the retrieved data
     } catch (error) {
         dispatch({ type: FETCH_MEALS_ERROR, payload: error.message });  // Dispatching a "FETCH_MEALS_ERROR" action with the error message

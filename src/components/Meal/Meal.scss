@@ -3,7 +3,9 @@
 
 // Styling for .sc-meal class
 .sc-meal {
-    // Media query for screens with a minimum width of 420px
+    // Should be applied only when the screen width is equal to or greater than 420 pixels.
+    // In this case, it sets the grid to have two columns of equal width. The 1fr value means that each column should take up an equal portion of the available space.
+    // It sets the gap between items to be 2.4 rem
     @media screen and (min-width: 420px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.4rem;

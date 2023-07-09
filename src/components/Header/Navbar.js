@@ -23,17 +23,19 @@ const Navbar = () => {  // Declaring a functional component called Navbar
   })
 
   return (  // Returning JSX elements
-    <nav className={`navbar bg-orange flex align-center ${scrolled ? 'scrolled': ""}`}  /* Navbar component with dynamic class names based on the "scrolled" state variable */ >
-      <div className='container w-100'  /* Container div with w-100 class */ >
+    <nav className={`navbar bg-orange flex align-center ${scrolled ? 'scrolled': ""}`}  /* Ternary Operator Navbar component with dynamic class names based on the "scrolled" state variable */ >
+      {/*If scrolled is true, it evaluates to the string 'scrolled'.
+      If scrolled is false, it evaluates to an empty string ('').*/}
+      <div className='container w-100'  /* Container div with width 100 class */ >
         <div className='navbar-content text-white'  /* Navbar content div with text-white class */ >
           <div className='brand-and-toggler flex align-center justify-between'  /* Brand and toggler div with flex classes */ >
-            <Link to = "/" className='navbar-brand fw-3 fs-22 flex align-center'  /* Link component to the home page with navbar-brand class and flex classes */ >
-              <MdFoodBank  /* MdFoodBank icon component */ />
+            <Link to = "/" className='navbar-brand fw-3 fs-22 flex align-center' > {/*Line below prints out the icon and the spicesavvy logo along with the linking ability of taking ypu back home*/}
+              <MdFoodBank  /* Icon next to spicesavvy logo */ />
               <span className='navbar-brand-text fw-7'>SpiceSavvy</span>  
             </Link>
             <div className='navbar-btns flex align-center'  /* Navbar buttons div with flex classes*/ >
               <button type="button" className='navbar-show-btn text-white' onClick={() => openSidebar()}  /* Button to show the sidebar with navbar-show-btn and text-white classes */ >
-                <IoMdMenu size={27}  /* IoMdMenu icon component */ />
+                <IoMdMenu size={27}  /* Hamburger icon that opens and closes sidebar */ />
               </button>
             </div>
           </div>

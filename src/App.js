@@ -12,6 +12,7 @@
 import './App.scss';
 
 // Importing the necessary components from 'react-router-dom'
+
 /*BrowserRouter: This component provides the routing functionality for your React application. It uses HTML5 history API to keep the UI 
 in sync with the current URL.
 
@@ -42,6 +43,10 @@ function App() {
   // Rendering the main application layout using JSX
   return (
     <BrowserRouter>
+    {/* component wraps the main application layout. It provides a routing context to the child 
+    components within its scope, allowing the application to navigate between different pages 
+    without a full page reload */}
+
       {/* Rendering the Header component */}
       <Header />
 
@@ -52,12 +57,24 @@ function App() {
       <Routes>
         {/* Route for the home page */}
         <Route path="/" element={<Home />} />
+        {/* Wwhen the user navigates to the root URL ("/"), which is typically the default URL 
+        when accessing a website, the Home component will be rendered. The Home component is passed 
+        as the element prop, indicating that it should be rendered when the URL matches the specified
+        path. */}
+
 
         {/* Route for the meal details page */}
         <Route path="/meal/:id" element={<MealDetails />} />
+        {/*when a user navigates to a URL that matches the pattern "/meal/{id}", where "{id}" can 
+        be any value, the MealDetails component will be rendered. The captured value of the id 
+        parameter will be passed as a prop to the MealDetails component.*/}
+
 
         {/* Route for the category page */}
         <Route path="/meal/category/:name" element={<Category />} />
+        {/* :name part acts as a placeholder for a category name. When the user navigates to a URL 
+        that matches this path pattern, the corresponding component (<Category />) will be rendered,
+        and the captured category name will be passed as a parameter to that component. */}
 
         {/* Route for the error page */}
         <Route path="*" element={<Error />} />
